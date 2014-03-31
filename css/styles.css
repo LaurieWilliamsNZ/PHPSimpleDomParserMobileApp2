@@ -1,0 +1,95 @@
+body { font-family: Arial, sans-serif; margin:0; padding: 0; }
+
+#mySwipe {
+	background-color: #eee;
+}
+
+.item {
+	padding: 10px;
+	box-sizing: border-box;
+	text-align: center;
+	font-size: 0.9em;
+	height: 300px;
+}
+
+.item > div {
+	padding: 10px;
+	max-width: 400px;
+	box-sizing: border-box;
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.item .img img {
+	box-shadow: 3px 3px 1px #888888;
+}
+
+.item  .title {
+	text-transform: uppercase;
+	font-size: 1.2em;
+	background-color: rgb(200,220,255);
+	color: #666;
+}
+
+.item .summary,
+.item .img { background-color: white; }
+.item .link { padding: 0 !important; }
+
+.item .link a {
+	display: block;
+	font-weight: bold;
+	text-decoration: none;
+	color: black;
+	background-color: rgb(200,220,255);
+	padding: 10px;
+}
+
+.buttons {
+	text-align: center;
+	margin: 10px;
+}
+.buttons button {
+	padding: 10px;
+	width: 100px;
+}
+
+/* Swipe 2 required styles */
+.swipe {
+  overflow: hidden;
+  visibility: hidden;
+  position: relative;
+}
+.swipe-wrap {
+  overflow: hidden;
+  position: relative;
+}
+.swipe-wrap > div {
+  float:left;
+  width:100%;
+  position: relative;
+}
+/* END required styles */
+
+
+/* http://stackoverflow.com/questions/1964839/jquery-please-wait-loading-animation */
+#modal {
+    display:    none;
+    position:   fixed;
+    z-index:    1000;
+    top:        0;
+    left:       0;
+    height:     100%;
+    width:      100%;
+    background: rgba( 255, 255, 255, .8 ) 
+                url('http://i.stack.imgur.com/FhHRx.gif') 
+                50% 50% 
+                no-repeat;
+}
+
+body.loading {
+    overflow: hidden;   
+}
+
+body.loading #modal {
+    display: block;
+}

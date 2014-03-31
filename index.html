@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width" />
+	<title>Test</title>
+	<link rel="stylesheet" href="css/styles.css" />
+	
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+	<script src="js/swipe.js"></script>
+	<script src="js/handlebars.js"></script>
+	<script src="js/app.js"></script>
+	<script id="event-item" type="text/x-handlebars-template">
+		<div class="item">
+			<div class="title">{{title}}</div>
+			<div class="img"><img src="{{img_small}}" /></div>
+			<div class="summary">{{desc_short}}</div>
+			<div class="link"><a href="{{url}}" target="_blank">Read More</a></div>
+		</div>
+	</script>
+	<script>
+		$(document).ready(function () {
+			
+			APP.init();
+			
+		});
+	</script>
+	
+</head>
+<body>
+
+<div id="mySwipe" class="swipe">
+	<div class="swipe-wrap"></div>
+</div>
+
+<div class="buttons">
+  <button onclick='mySwipe.prev()'>Prev</button> 
+  <button onclick='mySwipe.next()'>Next</button>
+</div>
+
+<div id="modal"></div>
+</body>
+</html>
